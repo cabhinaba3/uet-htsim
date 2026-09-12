@@ -1045,7 +1045,7 @@ int main(int argc, char **argv) {
 
                 optional<simtime_picosec> start_ts = {};
                 if (crt->start != TRIGGER_START) {
-                    start_ts.emplace(timeFromUs((uint32_t)crt->start));
+                    start_ts.emplace(crt->start);
                 } 
 
                 UecPdcSes* pdc = flow_pdc_map.find(crt->flowid)->second;
@@ -1118,7 +1118,7 @@ int main(int argc, char **argv) {
 
             optional<simtime_picosec> start_ts = {};
             if (crt->start != TRIGGER_START) {
-                start_ts.emplace(timeFromUs((uint32_t)crt->start));
+                start_ts.emplace(crt->start);
             } 
 
             UecMsg* msg = pdc->enque(crt->size, start_ts, true);

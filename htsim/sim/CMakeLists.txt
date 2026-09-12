@@ -137,6 +137,7 @@ if ( ENABLE_TESTS )
     # Unit tests.
     set(UNIT_TEST_FILES
         pipe_test
+        uec_test
     )
 
     foreach(UNIT_TEST_FILE ${UNIT_TEST_FILES}) 
