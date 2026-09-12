@@ -131,7 +131,7 @@ void RoceSrc::connect(Route* routeout, Route* routeback, RoceSink& sink, simtime
 
     if (starttime != TRIGGER_START) {
         //cout << "scheduling start at " << starttime << " now is " << timeAsUs(eventlist().now())<< endl;
-        eventlist().sourceIsPending(*this,timeFromUs((double)starttime));
+        eventlist().sourceIsPending(*this,starttime);
         //startflow();
     }
     else cout << "TRIGGER START " << _nodename << endl; 

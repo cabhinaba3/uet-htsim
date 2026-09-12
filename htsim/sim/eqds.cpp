@@ -427,7 +427,7 @@ void EqdsSrc::connectPort(uint32_t port_num,
         _flow._name = _name;
 
         if (start_time != TRIGGER_START) {
-            eventlist().sourceIsPending(*this, timeFromUs((uint32_t)start_time));
+            eventlist().sourceIsPending(*this, start_time);
         }
     }
     assert(_sink == &sink);
